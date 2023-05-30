@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+        border-radius: 0.5em;
+        border: 1px solid black;
+        width: 25%;
+        gap: 1em;
+      }
+
+      input {
+        padding: 0.5em;
+        border-radius: 0.5em;
+      }
+
+      textarea {
+        padding: 0.5em;
+        border-radius: 0.5em;
+      }
+
+      .input-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        border-radius: 0.5em;
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Sugerir noticia</h1>
+      <div class="input-item">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="input-item">
+        <label for="content">Conteúdo:</label>
+        <textarea id="content" name="content"></textarea>
+      </div>
+      <button type="submit">Submeter</button>
+    </form>
+  </body>
+</html>

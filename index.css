@@ -1,0 +1,176 @@
+/* Carrega a fonte utilizada no título */
+@font-face {
+  font-family: "English Towne";
+  src: url("EnglishTowne.ttf")
+}
+
+/* Carrega a fonte utilizada nos textos */
+@font-face {
+  font-family: "OldNewspaperTypes";
+  src: url("OldNewspaperTypes.ttf");
+}
+
+/* Define estilos universais para todos os elementos */
+* {
+  font-family: "OldNewspaperTypes";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define estilos do título */
+.title {
+  font-family: "English Towne";
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 100;
+}
+
+/* Define os estilos do sub-título */
+.subtitle {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Define o estilo da div que simula a folha do jornal */
+.jornal_container {
+  width: 1280px;
+  background: url("background.jpg");
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  padding: 2.5em;
+}
+
+/* Define o estilo do corpo do HTML */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Defin o estilo do menu */
+.menu {
+  border-top: 2px double;
+  border-bottom: 2px double;
+}
+
+/* Define o estilo da lista dentro do menu */
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.125rem;
+  list-style: none;
+}
+
+/* Define o estilo dos links dentro do menu */
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Define o estilo dos links dentro do menu */
+.menu a:hover {
+  text-shadow: 1px 1px 10px yellow;
+}
+
+
+/* Define os estilos das imagens */
+.image {
+  display: block;
+  border: 2px solid black;
+  width: 90%;
+  object-fit: cover;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Define o estilo da imagem principal */
+.image.main_image {
+  height: 100%;
+  margin: 0;
+}
+
+/* Define o layout */
+.notices {
+  display: grid;
+  grid-gap: 2.5em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px 1fr;
+  grid-template-areas:
+    "notice1 notice2 notice2 notice5"
+    "notice1 notice3 notice4 notice5";
+}
+
+/* Define o estilo de cada coluna do layout */
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Define o estilo da primeira coluna do layout */
+.notice1 {
+  grid-area: notice1;
+}
+
+/* Define o estilo da primeira segunda do layout */
+.notice2 {
+  grid-area: notice2;
+}
+
+/* Define o estilo da primeira terceira do layout */
+.notice3 {
+  grid-area: notice3;
+}
+
+/* Define o estilo da primeira quarta do layout */
+.notice4 {
+  grid-area: notice4;
+}
+
+/* Define o estilo da primeira quinta do layout */
+.notice5 {
+  grid-area: notice5;
+}
+
+/* Adiciona uma linha separando as colunas */
+.notice:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1.25em;
+  width: 2px;
+  background-color: black;
+}
+
+/* Define o estilo dos paragráfos */
+p {
+  text-indent: 2em;
+}
+
+/* Adiciona um espaço entre os paragráfos */
+p + p {
+  margin-top: 0.1em;
+}
+
+/* Define o estilo das tabelas */
+table {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Define o estilo das bordas das tabelas */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.1em;
+}
